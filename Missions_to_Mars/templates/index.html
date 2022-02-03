@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css"href="stylesheet.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+
+      <p>Look at Current Events, Featured Images, Mars Facts Table, Hemisphere Images</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">{{ text }}</a></p>
+    </div>
+  </div>
+  </div>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Latest Mars News</h3>
+          <h5>{{ final_dictionary.News_Title }}</h5>
+          <p>{{ final_dictionary.News_Paragragh }}</p>
+        </div>
+        <br>
+        <br>
+        <div class="col-md-6 card">
+          <h3 class="title"> Featured Mars Image </h3>
+          <img alt="Featured Image" src={{ final_dictionary.Featured_Image }}>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="page-header">
+              <h3 class="title">Mars Facts</h3>
+              <p class="category">The following table contains general facts about Mars.</p>
+            </div>
+            <div class="content table-responsive">
+              <table border="1" class="table table-hover table-striped dataframe">                                         
+                <thead>
+                  <tr style="text-align: right;">
+                    <th></th>
+                    <th>Mars - Earth Comparison</th>
+                    <th>Mars</th>
+                    <th>Earth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>Diameter:</td>
+                    <td>6,779 km</td>
+                    <td>12,742 km</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Mass:</td>
+                    <td>6.39 × 10^23 kg</td>
+                    <td>5.97 × 10^24 kg</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Moons:</td>
+                    <td>2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>Distance from Sun:</td>
+                    <td>227,943,824 km</td>
+                    <td>149,598,262 km</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>Length of Year:</td>
+                    <td>687 Earth days</td>
+                    <td>365.24 days</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>Temperature:</td>
+                    <td>-87 to -5 °C</td>
+                    <td>-88 to 58°C</td>
+                  </tr>
+                </tbody>
+              </table>      
+
+            </div>
+	        </div>
+	    </div>
+
+      
+	  </div>
+	</div>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <h3 class="title">Mars Hemispheres</h3>
+      <div class="col col-md-3">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ final_dictionary.Hemisphere_URL_1 }}" width="200em">
+          <div class="card-body">
+            <h5 class="card-title">{{ final_dictionary.Hemisphere_Title_1 }}</h5>
+          </div>
+
+        </div>
+      </div>
+      <div class="col col-md-3">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ final_dictionary.Hemisphere_URL_2 }}" width="200em">
+          <div class="card-body">
+            <h5 class="card-title">{{ final_dictionary.Hemisphere_Title_2 }}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-3">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ final_dictionary.Hemisphere_URL_3 }}" width="200em">
+          <div class="card-body">
+            <h5 class="card-title">{{ final_dictionary.Hemisphere_Title_3 }}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-3">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ final_dictionary.Hemisphere_URL_4 }}" width="200em">
+          <div class="card-body">
+            <h5 class="card-title">{{ final_dictionary.Hemisphere_Title_4 }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
